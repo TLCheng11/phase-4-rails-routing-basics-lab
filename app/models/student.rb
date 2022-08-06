@@ -4,4 +4,7 @@ class Student < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
+  def self.grades
+    self.order(grade: :desc)
+  end
 end
